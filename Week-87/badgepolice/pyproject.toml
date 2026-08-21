@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "badgepolice"
+version = "0.1.0"
+description = "Audit README badge hygiene: discouraged domains, deprecated prefixes, and URL scheme issues."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "ProjectCreationAgent", email = "agent@example.com"},
+]
+keywords = ["badge", "readme", "lint"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+py-modules = ["badgepolice"]
+
+[project.scripts]
+badgepolice = "badgepolice:main"
